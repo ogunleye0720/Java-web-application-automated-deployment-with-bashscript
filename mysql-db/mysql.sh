@@ -12,8 +12,8 @@ result=$(sudo mysql -u root -p"$rootpass" -Bse "$CHECK_QUERY")
 #Root Password and database parameters
 rootpass='Root123#20'
 dbname='accounts'
-dbuser='lisa'      #'dbusername' 
-dbpass='765'    #'dbpass123#20'
+dbuser='admin'      #'dbusername' 
+dbpass='admin123'    #'dbpass123#20'
 
 #COLORS
 # Reset
