@@ -3,6 +3,12 @@
 #Installation without prompts
 export DEBIAN_FRONTEND=noninteractive
 
+#Directory of sql backup file
+SQL_DIR="/home/ubuntu/Java-web-application-automated-deployment-with-bashscript/vprofile-project-aws-LiftAndShift/src/main/resources"
+
+# SQL file to import
+SQL_FILE="db_backup.sql"
+
 #MYSQL query to check if anonymous user exist
 CHECK_QUERY="SELECT user FROM mysql.user WHERE User='';"
 
@@ -179,6 +185,19 @@ EOF
               sudo mysql -u root -p"$rootpass" -e "CREATE USER '$dbuser'@'localhost' IDENTIFIED BY '$dbpass';" 
               echo -e "$Yellow \n Granting All Privileges on Database $dbname to $dbuser... $Color_off"
               sudo mysql -u root -p"$rootpass" -e "GRANT ALL ON $dbname.* TO '$dbuser'@'localhost' WITH GRANT OPTION;" 
+              echo -e "$Yellow \n Checking if sql file exist... $Color_off"
+              if [[ -f "$SQL_DIR/$SQL_FILE" ]]; then
+                    echo -e "$Yellow \n Importing $SQL_FILE into database $dbname... $Color_off"
+                    sudo mysql -u "$dbuser" -p"$dbpass" "$dbname" < "$SQL_DIR/$SQL_FILE"
+                    echo -e "$Yellow \n Checking if import was successful... $Color_off"
+                    if [[ $? -eq 0 ]]; then
+                         echo -e "$Green \n SQL file was imported successfuly !!! $Color_off"
+                    else
+                         echo -e "$Red \n Error: Failed to import SQL file !!! $Color_off"
+                    fi
+               else
+                    echo -e "$Red \n Error: SQL file '$SQL_FILE' not found in '$SQL_DIR' !!! $Color_off"
+               fi 
               echo -e "$Cyan \n Flushing Privileges... $Color_off"
               sudo mysql -u root -p"$rootpass" -e "FLUSH PRIVILEGES;"
 
