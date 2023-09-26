@@ -75,7 +75,7 @@ function ubuntuMysql() {
           echo "mysql-community-server mysql-community-server/re-root-pass password $rootpass" | debconf-set-selections     
           #Install mysql-server
           sudo apt install wget -y
-          sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+          sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
           sudo apt update -y && sudo apt upgrade -y
           sudo apt install mysql-server mysql-client mysql-common -y
 
