@@ -16,4 +16,27 @@ This repository contains a bash script application source-code to migrate a java
 ![ON-PREMISE-MULTITIER-WEB-APPLICATION](Images/on-premise-architecture-diagram.JPG)
 
 
+### RESOURCE REQUIREMENTS
+- [x] AWS OR ANY CLOUD PROVIDER
+- [x] 4 EC2 INSTANCES
+- [x] 1 APPLICATION LOAD-BALANCER
+- [x] 3 SECURITY GROUPS
+- [x] 2 HOSTED ZONES (ONE EACH FOR PRIVATE AND PUBLIC)
+- [x] DOMAIN NAME
+- [x] KEY-PAIR
+
+### SOFTWARE REQUIREMENTS
+
+| Name | Version |
+|------|---------|
+| <a name="MYSQL"></a> [MYSQL](#requirement\_MYSQL) | => 5.5 |
+| <a name="TOMCAT"></a> [TOMCAT ](#requirement\_) | => 8.0 |
+| <a name="JDK"></a> [JDK](#requirement\_) | => 8.0 |
+| <a name="MAVEN"></a> [MAVEN](#requirement\_) | => 2 |
+| <a name="MEMCACHE"></a> [MEMCACHE](#requirement\_) | => 1.6.XX |
+| <a name="RABBITMQ"></a> [RABBITMQ](#requirement\_) | => 3.XX |
+
+
+
+
 
