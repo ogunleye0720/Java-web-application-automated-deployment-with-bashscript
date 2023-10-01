@@ -12,6 +12,7 @@ This repository contains a bash script application source-code to migrate a java
 
 ### ARCHITECTURAL DIAGRAM
 <h4>The architectural diagram of the on-premise multitier java-web-application</h4>
+
 ![ON-PREMISE-MULTITIER-WEB-APPLICATION](Images/on-premise-architecture-diagram.JPG)
 
 
