@@ -11,9 +11,11 @@ This repository contains a bash script application source-code to migrate a java
 <p>This comprehensive guide will walk you through the step-by-step process of moving your Java Spring Boot application to the cloud using the lift and shift strategy. We will cover each component of the application stack, addressing specific considerations for Tomcat, RabbitMQ, Memcached, and MySQL. By the end of this migration journey, you will have a clear understanding of how to adapt your Java Spring Boot application to the cloud environment while ensuring minimal disruption to your users and business operations.</p>
 
 ### ARCHITECTURAL DIAGRAM
-<h4>The architectural diagram of the on-premise multitier java-web-application</h4>
+<h4>The architectural diagram for the on-premise multitier java-web-application</h4>
 
 ![ON-PREMISE-MULTITIER-WEB-APPLICATION](Images/on-premise-architecture-diagram.JPG)
+
+<h4>The architectural diagram for the AWS Cloud Migration</h4>
 
 ![AWS-LIFT-AND-SHIFT-ARCHITECTURAL-DIAGRAM](Images/AWS-LIFT-AND-SHIFT-DIAGRAM.JPG)
 
@@ -27,6 +29,8 @@ This repository contains a bash script application source-code to migrate a java
 - [x] 2 HOSTED ZONES (ONE EACH FOR PRIVATE AND PUBLIC)
 - [x] DOMAIN NAME
 - [x] KEY-PAIR
+- [x] IAM USER WITH S3 ACCESS
+- [x] S3-BUCKET TO STORE ARTIFACTS
 
 ### SOFTWARE REQUIREMENTS
 
