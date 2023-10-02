@@ -15,6 +15,9 @@ This repository contains a bash script application source-code to migrate a java
 
 ![ON-PREMISE-MULTITIER-WEB-APPLICATION](Images/on-premise-architecture-diagram.JPG)
 
+![AWS-LIFT-AND-SHIFT-ARCHITECTURAL-DIAGRAM](Images/AWS-LIFT-AND-SHIFT-DIAGRAM.JPG)
+
+
 
 ### RESOURCE REQUIREMENTS
 - [x] AWS OR ANY CLOUD PROVIDER
